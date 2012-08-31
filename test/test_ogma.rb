@@ -5,14 +5,14 @@ require 'ogma'
 
 class OgmaTest < Test::Unit::TestCase
   def test_single_lower_letter_transliteration
-    assert_equal Ogma.transliterate("щ"), "sch"
-    assert_equal Ogma.transliterate("ґ"), "g"
     assert_equal Ogma.transliterate("а"), "a"
+    assert_equal Ogma.transliterate("н"), "n"
+    assert_equal Ogma.transliterate("щ"), "sch"
   end
 
   def test_multi_lower_letter_transliteration
-    assert_equal Ogma.transliterate("ье"), "ie"
-    assert_equal Ogma.transliterate("ьё"), "ie"
+    assert_equal Ogma.transliterate("пьеза"), "pieza"
+    assert_equal Ogma.transliterate("тряпьё"), "tryapie"
   end
 
   def test_single_upper_letter_transliteration
@@ -22,7 +22,7 @@ class OgmaTest < Test::Unit::TestCase
   end
 
   def test_multi_upper_letter_transliteration
-    assert_equal Ogma.transliterate("ЬЕ"), "IE"
-    assert_equal Ogma.transliterate("ЬЁ"), "IE"
+    assert_equal Ogma.transliterate("ПЬЕЗА"), "PIEZA"
+    assert_equal Ogma.transliterate("ТРЯПЬЁ"), "TRYAPIE"
   end
 end
