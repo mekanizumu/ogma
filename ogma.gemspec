@@ -8,8 +8,10 @@ Gem::Specification.new do |s|
   s.authors     = ["Sergey Aldosev"]
   s.email       = ["stichie@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = "russian to english transliteration gem"
+  s.description = "simple russian to english transliteration gem with specific ukrainian letters support"
+
+  s.add_development_dependency "test-unit"
 
   s.rubyforge_project = "ogma"
 
